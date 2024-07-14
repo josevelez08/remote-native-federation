@@ -7,7 +7,7 @@ module.exports = withNativeFederation({
 
   /// define key and path to the remote remote module (it should be different of app.module.ts)
   exposes: {
-    './remoteModule': './src/app/remote-main.module.ts'
+    './remoteModule': './src/app/app-routing.module.ts'
   },
 
   shared: {

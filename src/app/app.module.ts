@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { Route, RouterModule } from '@angular/router';
 
 const routes: Route[] = [
   {
     path: '/home',
-    loadChildren: () => import('./remote-main.module').then((m) => m.RemoteMainModule)
+    loadChildren: () => import('./app-routing.module').then((m) => m.AppRoutingModule)
   }
 ];
 
@@ -21,7 +19,6 @@ const routes: Route[] = [
     CommonModule,
     BrowserModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
